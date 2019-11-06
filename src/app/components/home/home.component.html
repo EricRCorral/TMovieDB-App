@@ -1,0 +1,13 @@
+<div class="container mb-3 mt-3">
+
+    <app-galeria [peliculas]='proximosEstrenos | slice:0:6' titulo='Proximos estrenos'></app-galeria>
+
+    <br>
+
+    <app-galeria [peliculas]='populares | slice:0:6' titulo='Populares'></app-galeria>
+
+    <br>
+
+    <app-galeria [peliculas]='popularesInfantiles | slice:0:6' titulo='Populares infantiles'></app-galeria>
+
+</div>

@@ -1,0 +1,22 @@
+<div class="container mt-3 mb-3 animated fadeIn">
+    <div class="row">
+        <div class="col-lg-4">
+            <h1>{{ pelicula.title }}</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+            <img class="pelicula" [src]="pelicula | peliculaImagen" alt="No hay imagen disponible">
+        </div>
+        <div class="col-lg-8">
+            <h2>Sinopsis</h2>
+            <hr>
+            <p>{{ pelicula.overview }}</p>
+            <h2>Frases celebres</h2>
+            <p>{{ pelicula.tagline }}</p>
+            <p>Popularidad: <span class="badge badge-warning">{{ pelicula.popularity }} </span> </p>
+            <p>Voto promedio: <span class="badge badge-info">{{ pelicula.vote_average }} </span> </p>
+            <button class="btn btn-outline-info" (click)='regresar()'>Regresar</button>
+        </div>
+    </div>
+</div>
