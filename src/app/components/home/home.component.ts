@@ -9,16 +9,17 @@ export class HomeComponent {
 
   proximosEstrenos: any[] = [];
   populares: any[] = [];
-  popularesInfantiles: any[] = [];
+  bests: any[] = [];
 
   constructor(public peliculasservice: PeliculasService) {
 
     this.peliculasservice.getPopulares().subscribe
-   ( (data: any) =>  {this.populares = data.results; });
-    this.peliculasservice.getProximosEstrenos().subscribe
-  ( (data: any) =>  this.proximosEstrenos = data.results );
+   ( (data: any) =>  this.populares = data.results );
 
-    this.peliculasservice.getPopularesInfantiles().subscribe
-  ( (data: any ) => this.popularesInfantiles = data.results );
-   }
+    this.peliculasservice.getProximosEstrenos().subscribe
+  ( (data: any) =>  this.proximosEstrenos = data.results);
+
+    this.peliculasservice.getBestOfLastYear().subscribe
+  ( (data: any ) => this.bests = data.results);
+  }
 }

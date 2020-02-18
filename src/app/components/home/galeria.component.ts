@@ -13,8 +13,8 @@ export class GaleriaComponent {
 
   constructor(private router: Router) { }
 
-  verPelicula(id: any) {
-    this.router.navigate(['home', id]);
+  verPelicula(pelicula: any) {
+    this.router.navigate(['home', pelicula.id]);
   }
 
 }

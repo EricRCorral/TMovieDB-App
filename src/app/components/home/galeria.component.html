@@ -3,31 +3,31 @@
 <div class="row animated fadeIn" *ngIf="peliculas">
     <div class="col-sm-6">
         <div class="row">
-            <div class="col-md-12 div-pic-1 puntero" [ngStyle]="{'background-image': 'url('+ (peliculas[0] | peliculaImagen) +')'}" (click)='verPelicula(peliculas[0].id)'>
-                <p class="pic-titulo">{{ peliculas[0].title }}</p>
+            <div class="col-md-12 div-pic-1 puntero" [ngStyle]="{'background-image': 'url('+ (peliculas[0] | peliculaImagen) +')'}" (click)='verPelicula(peliculas[0])'>
+                <p class="pic-titulo">{{ peliculas['0'].title }}</p>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-6 div-pic-2 puntero" [ngStyle]="{'background-image': 'url('+ (peliculas[1] | peliculaImagen) +')'}" (click)='verPelicula(peliculas[1].id)'>
-                <p class="pic-titulo">{{ peliculas[1].title }}</p>
+            <div class="col-sm-6 div-pic-2 puntero" [ngStyle]="{'background-image': 'url('+ (peliculas[1] | peliculaImagen) +')'}" (click)='verPelicula(peliculas[1])'>
+                <p class="pic-titulo">{{ peliculas['1'].title }}</p>
             </div>
-            <div class="col-sm-6 div-pic-2 puntero" [ngStyle]="{'background-image': 'url('+ (peliculas[2] | peliculaImagen) +')'}" (click)='verPelicula(peliculas[2].id)'>
-                <p class="pic-titulo">{{ peliculas[2].title }}</p>
+            <div class="col-sm-6 div-pic-2 puntero" [ngStyle]="{'background-image': 'url('+ (peliculas[2] | peliculaImagen) +')'}" (click)='verPelicula(peliculas[2])'>
+                <p class="pic-titulo">{{ peliculas['2'].title }}</p>
             </div>
         </div>
     </div>
     <div class="col-sm-6">
         <div class="row">
-            <div class="col-sm-6 div-pic-2 puntero" [ngStyle]="{'background-image': 'url('+ (peliculas[3] | peliculaImagen) +')'}" (click)='verPelicula(peliculas[3].id)'>
-                <p class="pic-titulo">{{ peliculas[3].title }}</p>
+            <div class="col-sm-6 div-pic-2 puntero" [ngStyle]="{'background-image': 'url('+ (peliculas[3] | peliculaImagen) +')'}" (click)='verPelicula(peliculas[3])'>
+                <p class="pic-titulo">{{ peliculas['3'].title }}</p>
             </div>
-            <div class="col-sm-6 div-pic-2 puntero" [ngStyle]="{'background-image': 'url('+ (peliculas[4] | peliculaImagen) +')'}" (click)='verPelicula(peliculas[4].id)'>
-                <p class="pic-titulo">{{ peliculas[4].original_title }}</p>
+            <div class="col-sm-6 div-pic-2 puntero" [ngStyle]="{'background-image': 'url('+ (peliculas[4] | peliculaImagen) +')'}" (click)='verPelicula(peliculas[4])'>
+                <p class="pic-titulo">{{ peliculas['4'].original_title }}</p>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12 div-pic-1 puntero" [ngStyle]="{'background-image': 'url('+ (peliculas[5] | peliculaImagen) +')'}" (click)='verPelicula(peliculas[5].id)'>
-                <p class="pic-titulo">{{ peliculas[5].title }}</p>
+            <div class="col-md-12 div-pic-1 puntero" [ngStyle]="{'background-image': 'url('+ (peliculas[5] | peliculaImagen) +')'}" (click)='verPelicula(peliculas[5])'>
+                <p class="pic-titulo">{{ peliculas['5'].title }}</p>
             </div>
         </div>
     </div>
