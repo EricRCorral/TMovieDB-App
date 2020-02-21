@@ -11,9 +11,9 @@ export class BuscadorComponent implements OnInit {
 
   peliculas = '';
 
-  href = window.location.href ;
+  href = window.location.href;
 
-  noMatch = window.decodeURI(window.location.pathname.substr(8, ));
+  noMatch = this.route.params.subscribe( resp => this.noMatch = resp.termino );
 
   constructor(public peliculasservice: PeliculasService,
               private router: Router,
@@ -31,7 +31,7 @@ export class BuscadorComponent implements OnInit {
            (data: any) => { this.router.navigate(['buscar', termino]);
                             termino = data.results;
                             this.peliculas = termino;
-                            this.noMatch = window.decodeURI(window.location.pathname.substr(8, ));
+                            this.route.params.subscribe( resp => this.noMatch = resp.termino );
              }); }
   }
 

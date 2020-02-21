@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 
 export class PeliculaComponent {
 
-  pelicula = {};
+  pelicula: any;
 
   peliculaId = window.location.pathname.substr(6, );
 

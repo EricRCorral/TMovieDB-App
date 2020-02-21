@@ -14,7 +14,7 @@ export class PeliculaImagenPipe implements PipeTransform {
   } if (pelicula.poster_path) {
     return url + pelicula.poster_path;
   } else {
-      return '../../assets/images/no-image.png';
+      return 'assets/images/no-image.png';
       }
     }
   }

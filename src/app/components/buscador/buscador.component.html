@@ -11,10 +11,10 @@
             <button class="btn btn-outline-info btn-block" (click)='verPelicula(pelicula)'>Ver mas...</button>
         </div>
     </div>
-    <div *ngIf="href == 'http://localhost:4200/buscar'">
+    <div *ngIf="href == 'http://ericrcorral.github.io/TMovieDB-App/buscar'">
         <h3 class="text-center mt-5 animated fadeIn">Aqui se mostrarán los resultados de su busqueda.</h3>
     </div>
-    <div *ngIf="peliculas.length == 0 && href !== 'http://localhost:4200/buscar'" class="animated fadeIn text-center mt-5">
+    <div *ngIf="peliculas.length == 0 && href !== 'http://ericrcorral.github.io/TMovieDB-App/buscar'" class="animated fadeIn text-center mt-5">
         <h3>No se encontraron resultados con el nombre: <b>{{ noMatch }}</b></h3>
     </div>
 

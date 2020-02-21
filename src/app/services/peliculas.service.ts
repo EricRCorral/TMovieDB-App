@@ -16,26 +16,6 @@ export class PeliculasService {
 
     return this.http.get(url);
   }
-  // getProximosEstrenos() {
-
-  //   const fecha = new Date();
-
-  //   if (fecha.getDate() < 10 ) {
-  //     const desdeISO = `${fecha.getFullYear()}-${fecha.getMonth() + 1}-0${fecha.getDate()}`;
-  //     const hastaISO = `${fecha.getFullYear()}-${fecha.getMonth() + 2}-0${fecha.getDate()}`;
-
-  //     const url = `${this.urlMoviedb}/discover/movie?primary_release_date.gte=${desdeISO}&primary_release_date.lte=${hastaISO}&api_key=${this.apikey}&language=es`;
-
-  //     return this.http.get(url);
-  //   } else {
-  //     const desdeISO = `${fecha.getFullYear()}-${fecha.getMonth() + 1}-${fecha.getDate()}`;
-  //     const hastaISO = `${fecha.getFullYear()}-${fecha.getMonth() + 2}-${fecha.getDate()}`;
-
-  //     const url = `${this.urlMoviedb}/discover/movie?primary_release_date.gte=${desdeISO}&primary_release_date.lte=${hastaISO}&api_key=${this.apikey}&language=es`;
-
-  //     return this.http.get(url);
-  //     }
-  // }
 
   getProximosEstrenos( ) {
 
