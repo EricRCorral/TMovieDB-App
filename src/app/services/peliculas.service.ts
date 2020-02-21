@@ -52,7 +52,7 @@ export class PeliculasService {
     return this.http.get(url);
   }
 
-  getPelicula(id: string) {
+  getPelicula(id: number) {
     const url = `${this.urlMoviedb}/movie/${id}?&api_key=${this.apikey}&language=es`;
     return this.http.get(url);
   }

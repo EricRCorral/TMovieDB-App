@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { PeliculasService } from '../../services/peliculas.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-pelicula',
@@ -11,12 +11,16 @@ export class PeliculaComponent {
 
   pelicula: any;
 
-  peliculaId = window.location.pathname.substr(6, );
+  peliculaId: number;
 
   constructor(public peliculasservice: PeliculasService,
-              private router: Router) {
-    this.peliculasservice.getPelicula(this.peliculaId).subscribe(
-      (data: any) => {this.pelicula = data; }
+              private router: Router,
+              private activatedRoute: ActivatedRoute) {
+
+                this.activatedRoute.params.subscribe( resp => this.peliculaId = resp.id);
+
+                this.peliculasservice.getPelicula(this.peliculaId).subscribe(
+                 (data: any) => {this.pelicula = data; }
     );
    }
    regresar() {
