@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { PeliculasService } from '../../services/peliculas.service';
 import { Router, ActivatedRoute } from '@angular/router';
 
@@ -7,7 +7,7 @@ import { Router, ActivatedRoute } from '@angular/router';
   templateUrl: './buscador.component.html',
 })
 
-export class BuscadorComponent implements OnInit {
+export class BuscadorComponent {
 
   peliculas = '';
 
@@ -39,9 +39,5 @@ export class BuscadorComponent implements OnInit {
 
     const peliculaId = pelicula.id;
     this.router.navigate(['peli', peliculaId]);
-  }
-
-  ngOnInit() {
-
   }
 }

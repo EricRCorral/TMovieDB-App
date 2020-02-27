@@ -25,7 +25,7 @@ export class PeliculaComponent {
    }
    regresar() {
 
-     if (window.location.pathname === `/peli/${this.peliculaId}`) {
+     if (window.location.href === `https://ericrcorral.github.io/TMovieDB-App/peli/${this.peliculaId}`) {
        window.history.back();
      } else {
        this.router.navigate(['home']);
