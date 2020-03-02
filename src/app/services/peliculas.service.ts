@@ -20,12 +20,24 @@ export class PeliculasService {
   getProximosEstrenos( ) {
 
     let mesFin = (new Date().getMonth() + 1).toString();
+    let diaFin = (new Date().getDate() + 1).toString();
 
     let mesInicio = (new Date().getMonth()).toString();
+    let diaInicio = (new Date().getDate()).toString();
 
     if (mesInicio !== '10' || '11' || '12') {
 
       mesInicio = `0${mesInicio}`;
+
+    }
+    if (diaInicio === '1' || '2' || '3' || '4' || '5' || '6' || '7' || '8' || '9') {
+
+      diaInicio = `0${diaInicio}`;
+
+    }
+    if (diaFin === '1' || '2' || '3' || '4' || '5' || '6' || '7' || '8' || '9') {
+
+      diaFin = `0${diaFin}`;
 
     }
     if (mesFin !== '10' || '11' || '12') {
@@ -34,9 +46,9 @@ export class PeliculasService {
 
     }
 
-    const inicio = `${new Date().getFullYear()}-${mesInicio}-${new Date().getDate()}`;
+    const inicio = `${new Date().getFullYear()}-${mesInicio}-${diaInicio}`;
 
-    const fin = `${new Date().getFullYear()}-${mesFin}-${new Date().getDate()}`;
+    const fin = `${new Date().getFullYear()}-${mesFin}-${diaFin}`;
 
     return this.http.get(`${this.urlMoviedb}/discover/movie?primary_release_date.gte=${inicio}&primary_release_date.lte=${fin}&api_key=${this.apikey}&language=es`);
   }
