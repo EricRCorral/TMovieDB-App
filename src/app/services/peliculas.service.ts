@@ -30,21 +30,24 @@ export class PeliculasService {
       mesInicio = `0${mesInicio}`;
 
     }
-    if (diaInicio === '1' || '2' || '3' || '4' || '5' || '6' || '7' || '8' || '9') {
-
-      diaInicio = `0${diaInicio}`;
-
-    }
-    if (diaFin === '1' || '2' || '3' || '4' || '5' || '6' || '7' || '8' || '9') {
-
-      diaFin = `0${diaFin}`;
-
-    }
     if (mesFin !== '10' || '11' || '12') {
 
       mesFin = `0${mesFin}`;
 
     }
+
+    if (Number(diaInicio) < 10) {
+
+      diaInicio = `0${diaInicio}`;
+
+      console.log(diaInicio);
+        }
+
+    if (Number(diaFin) < 10) {
+
+        diaFin = `0${diaFin}`;
+
+        }
 
     const inicio = `${new Date().getFullYear()}-${mesInicio}-${diaInicio}`;
 
